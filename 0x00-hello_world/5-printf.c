@@ -4,7 +4,7 @@
  *
  * Description: 'Using printf c function'
  *
- * returns: Always 0 (Success)
+ * return: Always 0 (Success)
  */
 int main(void)
 {
