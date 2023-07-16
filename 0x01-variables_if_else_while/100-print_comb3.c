@@ -11,8 +11,8 @@ for (n = 0; n < 9; n++)
 {
 for (m = n + 1; m <= 9; m++)
 {
-putchar(n);
-putchar(m);
+putchar('0' + n);
+putchar('0' + m);
 if (m < 9)
 {
 putchar(',');
