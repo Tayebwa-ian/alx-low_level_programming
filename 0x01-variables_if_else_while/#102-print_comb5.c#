@@ -13,7 +13,7 @@ for (m = 0; m < 9; m++)
 {
 for (x = n; x <= 9; x++)
 {
-for (q = 1; q <= 9; q++)
+for (q = m + 1; q <= 9; q++)
 {
 putchar('0' + n);
 putchar('0' + m);
