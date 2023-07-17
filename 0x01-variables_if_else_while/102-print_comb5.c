@@ -16,7 +16,7 @@ putchar('0' + (n % 10));
 putchar(' ');
 putchar('0' + (m / 10));
 putchar('0' + (m % 10));
-if ((n != 98) && (m != 99))
+if ((n < 98) && (m < 99))
 {
 putchar(',');
 putchar(' ');
