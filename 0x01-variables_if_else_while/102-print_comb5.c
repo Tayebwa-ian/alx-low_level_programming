@@ -6,26 +6,20 @@
  */
 int main(void)
 {
-int n, m, x, q;
-for (n = 0; n <= 9; n++)
+int n, m;
+for (n = 0; n <= 98; n++)
 {
-for (m = 0; m < 9; m++)
+for (m = 0; m < 99; m++)
 {
-for (x = n; x <= 9; x++)
-{
-for (q = 1; q <= 9; q++)
-{
-putchar('0' + n);
-putchar('0' + m);
+putchar('0' + (n / 10));
+putchar('0' + (m % 10));
 putchar(' ');
-putchar('0' + x);
-putchar('0' + q);
-if (n != 9 && m != 8)
+putchar('0' + (n / 10));
+putchar('0' + (m % 10));
+if (n != 98 && m != 99)
 {
 putchar(',');
 putchar(' ');
-}
-}
 }
 }
 }
