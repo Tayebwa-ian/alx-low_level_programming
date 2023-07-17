@@ -20,7 +20,7 @@ putchar('0' + m);
 putchar(' ');
 putchar('0' + x);
 putchar('0' + m);
-if (n == 9 && m == 8)
+if (n != 9 && m != 8)
 {
 putchar(',');
 putchar(' ');
