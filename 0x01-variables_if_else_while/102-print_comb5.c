@@ -19,7 +19,7 @@ putchar('0' + n);
 putchar('0' + m);
 putchar(' ');
 putchar('0' + x);
-putchar('0' + m);
+putchar('0' + q);
 if (n != 9 && m != 8)
 {
 putchar(',');
