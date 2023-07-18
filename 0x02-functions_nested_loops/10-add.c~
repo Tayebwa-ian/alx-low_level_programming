@@ -1,8 +1,0 @@
-/**
- * add - adds two integers
- *
- * @n: first integer
- * @m: second integer
- *
- * Return: the sum of the two integers
- */
