@@ -22,11 +22,33 @@ for (j = 0; j <= n; j++)
 result = i * j;
 if (j != n)
 {
+if (result <= 9)
+{
+printf("  %d, ", result);
+}
+else if (result <= 99)
+{
+printf(" %d, ", result);
+}
+else
+{
 printf("%d, ", result);
+}
+}
+else
+{
+if (result <= 9)
+{
+printf("  %d", result);
+}
+else if (result <= 99)
+{
+printf(" %d", result);
 }
 else
 {
 printf("%d", result);
+}
 }
 }
 printf("\n");
