@@ -15,9 +15,9 @@ return;
 else
 {
 int i, j, result;
-for (i = 0; i < n; i++)
+for (i = 0; i <= n; i++)
 {
-for (j = 0; j < n; j++)
+for (j = 0; j <= n; j++)
 {
 result = i * j;
 if (j != n)
