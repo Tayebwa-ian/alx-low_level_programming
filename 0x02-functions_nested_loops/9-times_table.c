@@ -19,7 +19,7 @@ _putchar('0' + (result % 10));
 }
 else
 {
-if (j > 2)
+if (j > 1)
 {
 _putchar(' ');
 _putchar('0' + result);
