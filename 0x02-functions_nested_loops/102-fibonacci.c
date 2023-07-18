@@ -6,16 +6,20 @@
  */
 int main(void)
 {
-int count, i, first, second;
+int count, i;
+long int first, second;
 first = 1;
 second = 2;
 count = 50;
-printf("%d, ", first);
-printf("%d, ", second);
+printf("%ld, ", first);
+printf("%ld, ", second);
 for (i = 3; i <= count; i++)
 {
-int next = first + second;
-printf("%d, ", next);
+long int next = first + second;
+if (count == 50)
+printf("%ld", next);
+else
+printf("%ld, ", next);
 first = second;
 second = next;
 }
