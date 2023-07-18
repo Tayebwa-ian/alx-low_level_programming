@@ -1,7 +1,8 @@
 /**
-11;rgb:0000/0000/0000* _islower - checks if character is in lower case
+ * _islower - checks if character is in lower case
  *
  * @c: an integer character the function takes
+ *
  * Return: 0 (Success) or 1 (Failure)
  */
 int _islower(int c)
