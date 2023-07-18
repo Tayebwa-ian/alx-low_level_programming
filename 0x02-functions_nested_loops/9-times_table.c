@@ -20,6 +20,7 @@ _putchar('0' + (result % 10));
 else
 {
 _putchar('0' + result);
+_putchar(' ');
 }
 if (j < 9)
 {
