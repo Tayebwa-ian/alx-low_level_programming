@@ -19,8 +19,15 @@ _putchar('0' + (result % 10));
 }
 else
 {
-_putchar('0' + result);
+if (j > 2)
+{
 _putchar(' ');
+_putchar('0' + result);
+}
+else
+{
+_putchar('0' + result);
+}
 }
 if (j < 9)
 {
