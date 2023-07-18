@@ -33,6 +33,9 @@ printf("%3d", result);
 }
 else
 {
+if (j == n)
+printf("%d", result);
+else
 printf("%d, ", result);
 }
 }
