@@ -11,7 +11,8 @@ for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 10; j++)
 {
-_putchar('0' + (i * j));
+_putchar('0' + ((i * j) / 10));
+_putchar('0' + ((i * j) % 10));
 if (j < 9)
 {
 _putchar(',');
