@@ -1,0 +1,8 @@
+#include "main.h"
+/**
+ * print_sign - Prints a sign depending on number
+ *
+ * @n: a number that is to be evaluated
+ *
+ * Return: 1, 0 or -1 depending on the number
+ */
