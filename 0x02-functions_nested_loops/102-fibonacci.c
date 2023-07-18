@@ -16,7 +16,7 @@ printf("%ld, ", second);
 for (i = 3; i <= count; i++)
 {
 long int next = first + second;
-if (count == 50)
+if (i == count)
 printf("%ld", next);
 else
 printf("%ld, ", next);
