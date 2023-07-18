@@ -17,7 +17,10 @@ if (result > 9)
 _putchar('0' + (result / 10));
 _putchar('0' + (result % 10));
 }
+else
+{
 _putchar('0' + result);
+}
 if (j < 9)
 {
 _putchar(',');
