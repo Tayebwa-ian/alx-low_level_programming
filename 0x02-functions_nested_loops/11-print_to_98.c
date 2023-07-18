@@ -26,7 +26,7 @@ printf("\n");
 }
 else
 {
-for (i = n; i > 99; i--)
+for (i = n; i >= 98; i--)
 {
 if (i != 98)
 {
