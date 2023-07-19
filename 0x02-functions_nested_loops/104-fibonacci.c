@@ -7,19 +7,19 @@
 int main(void)
 {
 int count, i;
-unsigned long long int first, second;
+unsigned long int first, second;
 first = 1;
 second = 2;
 count = 98;
-printf("%llu, ", first);
-printf("%llu, ", second);
+printf("%lu, ", first);
+printf("%lu, ", second);
 for (i = 3; i <= count; i++)
 {
-unsigned long long int next = first + second;
+unsigned long int next = first + second;
 if (i == count)
-printf("%llu", next);
+printf("%lu", next);
 else
-printf("%llu, ", next);
+printf("%lu, ", next);
 first = second;
 second = next;
 }
