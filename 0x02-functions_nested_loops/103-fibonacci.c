@@ -11,7 +11,7 @@ long int first, second;
 first = 1;
 second = 2;
 even_sum = 2;
-total = first + second;
+total = 0;
 while (total < 4000000)
 {
 long int next = first + second;
@@ -21,7 +21,7 @@ even_sum += next;
 }
 first = second;
 second = next;
-total += next;
+total = next;
 }
 printf("%d\n", even_sum);
 return (0);
