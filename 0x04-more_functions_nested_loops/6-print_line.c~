@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ * print_line - printing a line
+ * @n: number of line to print
+ * Return: void
+ */
+
+void print_line(int n)
+{
+  if (n == 0 || n < 0)
+    {
+      return;
+    }
+  else
+    {
+      
