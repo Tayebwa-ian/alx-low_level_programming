@@ -1,0 +1,19 @@
+#include "main.h"
+/**
+ *_puts - count characters in a string
+ *@str: the string
+ *Return: void
+ */
+void _puts(char *str)
+{
+int i;
+char ch;
+ch = '\0';
+i = 0;
+while (*(str + i) != ch)
+{
+_putchar(*(str + i));
+i++;
+}
+_putchar('\n');
+}
