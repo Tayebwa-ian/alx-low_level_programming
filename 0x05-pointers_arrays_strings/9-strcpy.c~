@@ -1,0 +1,13 @@
+/**
+ *_strcpy - copy a string
+ *@src: string varable to copy from
+ *@dest: string varable to copy to
+ *Return: Address of copies string
+ */
+char *_strcpy(char *dest, char *src)
+{
+char ch;
+ch = *src;
+dest = ch;
+return (*dest);
+}
