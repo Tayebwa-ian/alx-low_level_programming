@@ -113,7 +113,7 @@ int num;
 num = ch - '0';
 if (find_minus(s) == 0)
 {
-res = ((res * 10) + num) * -1;
+res = (res * -10) - num;
 }
 else
 {
