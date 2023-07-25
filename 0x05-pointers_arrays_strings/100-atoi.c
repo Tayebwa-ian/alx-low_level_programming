@@ -20,7 +20,7 @@ return (i);
 /**
  *check_char - check if character is number
  *@ch: the character
- *Return 1 on Success 0 on failure
+ *Return: 1 on Success 0 on failure
  */
 int check_char(char ch)
 {
