@@ -25,7 +25,8 @@ int main(void)
   /*Seed the random number generator */
   srand((unsigned int)(time(NULL)));
 
-  int i, randomizer;
+  int i;
+  int randomizer;
   randomizer = rand() % 4;
 
   for (i = 0; i < 10; i++)
