@@ -21,7 +21,7 @@ i = length / 2;
 }
 else
 {
-i = (length - 1) / 2;
+i = (length / 2) + 1;
 }
 while (*(str + i) != ch)
 {
