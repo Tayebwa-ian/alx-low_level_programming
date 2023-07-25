@@ -7,6 +7,8 @@
  */
 int main(void)
 {
+  int i, randomizer;
+  
   /* a string of numbers */
   char numbers[] = "0123456789";
 
@@ -25,8 +27,6 @@ int main(void)
   /*Seed the random number generator */
   srand((unsigned int)(time(NULL)));
 
-  int i;
-  int randomizer;
   randomizer = rand() % 4;
 
   for (i = 0; i < 10; i++)
