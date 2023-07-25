@@ -97,7 +97,8 @@ return (0);
 int _atoi(char *s)
 {
 char ch;
-int i, res;
+int i, result;
+unsigned int res;
 i = 0;
 res = 0;
 
@@ -112,7 +113,8 @@ if (check_char(ch) == 1)
 int num;
 num = ch - '0';
 res = (res * 10) + num;
- 
+result = res;
+
 if (check_char(*(s + i + 1)) == 0)
 {
 break;
@@ -122,9 +124,9 @@ i++;
 }
 if (find_minus(s) == 0)
 {
-res = res * -1;
+result = res * -1;
 }
-return (res);
+return (result);
 }
 else
 {
