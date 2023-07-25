@@ -13,7 +13,7 @@ count = 0;
 /*Calculate string length*/
 while (*(str + count) != ch)
 count++;
-length = count - 1;
+length = count;
 
 if (length % 2 == 0)
 {
