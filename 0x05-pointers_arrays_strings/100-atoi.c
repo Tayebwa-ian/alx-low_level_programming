@@ -111,20 +111,18 @@ if (check_char(ch) == 1)
 /* converting character into string */
 int num;
 num = ch - '0';
-if (find_minus(s) == 0)
-{
-res = (res * -10) - num;
-}
-else
-{
 res = (res * 10) + num;
-}
+ 
 if (check_char(*(s + i + 1)) == 0)
 {
 break;
 }
 }
 i++;
+}
+if (find_minus(s) == 0)
+{
+res = res * -1;
 }
 return (res);
 }
