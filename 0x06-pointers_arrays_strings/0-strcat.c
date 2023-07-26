@@ -6,7 +6,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char *start, *dest_first = dest;
+	char *start;
 	int length;
 
 	length = 0;
@@ -14,7 +14,7 @@ char *_strcat(char *dest, char *src)
 	/* getting the last address of intial dest string */
 	while (*(dest + length) != '\0')
 		length++;
-	start = dest_first + length;
+	start = dest + length;
 
 	while (*src == '\0')
 	{
@@ -23,5 +23,5 @@ char *_strcat(char *dest, char *src)
 		src++;
 	}
 	*start = '\0'; /*adds a terminating null byte*/
-	return (dest_first);
+	return (dest);
 }
