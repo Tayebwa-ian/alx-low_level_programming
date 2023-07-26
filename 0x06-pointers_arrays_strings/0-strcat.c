@@ -16,12 +16,12 @@ char *_strcat(char *dest, char *src)
 		length++;
 	start = dest + length;
 
-	while (*src == '\0')
+	while (*src != '\0')
 	{
 		*start = *src;
 		start++;
 		src++;
 	}
 	*start = '\0'; /*adds a terminating null byte*/
-	return (start);
+	return (dest);
 }
