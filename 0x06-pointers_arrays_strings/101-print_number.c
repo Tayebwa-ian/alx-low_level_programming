@@ -8,8 +8,6 @@
 
 void print_number(int n)
 {
-	char bucket[20];
-	int i, j;
 
 	/* Handles the case for when n is a negative */
 	if (n < 0)
@@ -22,17 +20,8 @@ void print_number(int n)
 		_putchar('0' + n);
 	else
 	{
-		i = 0;
-		while (n != 0)
-		{
-			bucket[i] = n % 10 + '0';
-			n = n / 10;
-			i++;
-		}
-		bucket[i] = '\0';
-		for (j = i; j >= 0; j--)
-		{
-			_putchar(bucket[j]);
-		}
+		print_number(n / 10);
+		_putchar(n % 10 + '0');
+
 	}
 }
