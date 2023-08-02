@@ -1,0 +1,10 @@
+/**
+ *_sqrt_recursion - find square root of a number
+ *@@n: the number
+ *Return: Squae root or -1
+ */
+
+int _sqrt_recursion(int n)
+{
+	_sqrt(n, 0);
+}
