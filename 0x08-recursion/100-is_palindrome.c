@@ -1,5 +1,18 @@
 #include <stdio.h>
 /**
+ *len - calculate string length
+ *@str: the string
+ *Return: the length
+ */
+
+int len(char *str)
+{
+	if (*str == '\0')
+		return (0);
+	return (1 + len(str + 1));
+}
+
+/**
  *pal - finds if given string is palindrome or not
  *@str: the string
  *@last: last address
@@ -27,16 +40,9 @@ int pal(char *str, int first, int last)
 int is_palindrome(char *s)
 {
 	char *temp = s;
-	int len = 0;
 
 	if (*s == '\0')
 		return (1);
 
-	while (*s != '\0')
-	{
-		s++;
-		len++;
-	}
-
-	return (pal(temp, 0, (len - 1)));
+	return (pal(temp, 0, len(s) - 1));
 }
