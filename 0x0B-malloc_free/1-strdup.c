@@ -8,6 +8,7 @@ char *_strdup(char *str)
 {
 	char *array;
 	unsigned int j, i;
+	char ch;
 
 	i = 0;
 	j = 0;
@@ -19,7 +20,7 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	array = (char *)malloc(sizeof(char) * (i + 1));
+	array = (char *)malloc(sizeof(ch) * (i + 1));
 	while (j <= i)
 	{
 		array[j] = str[j];
