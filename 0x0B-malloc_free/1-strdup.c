@@ -20,7 +20,11 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	array = (char *)malloc(sizeof(ch) * (i + 1));
+	array = malloc(sizeof(ch) * (i + 1));
+	if (array == NULL)
+	{
+		return (NULL);
+	}
 	while (j <= i)
 	{
 		array[j] = str[j];
