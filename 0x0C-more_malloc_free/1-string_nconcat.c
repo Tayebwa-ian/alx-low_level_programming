@@ -1,4 +1,19 @@
 #include "main.h"
+/**
+ *_strlen - calc string length
+ *@str: the string
+ *Return: the length of the string
+ */
+unsigned int _strlen(char *str)
+{
+	unsigned int i = 0;
+
+	while (*(str + i) != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 /**
  *string_nconcat - joins two strings
@@ -18,12 +33,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n == strlen(s2) || n > strlen(s2))
+	if (n == _strlen(s2) || n > _strlen(s2))
 	{
-		n = strlen(s2);
+		n = _strlen(s2);
 	}
 
-	joint = malloc(strlen(s1) + n + 1);
+	joint = malloc(_strlen(s1) + n + 1);
 
 	if (joint == NULL)
 		return (NULL);
