@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	if (n == _strlen(s2) || n > _strlen(s2))
+	if (n >= _strlen(s2))
 	{
 		n = _strlen(s2);
 	}
@@ -50,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 
-	while (j <= n)
+	while (j < n)
 	{
 		*(joint + i) = *(s2 + j);
 		j++;
