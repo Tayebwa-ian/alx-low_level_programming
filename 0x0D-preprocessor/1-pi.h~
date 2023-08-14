@@ -1,0 +1,10 @@
+#ifndef PI_H
+#define PI_H
+/**
+ * File: 0-object_like_macro
+ *
+ * Desc: header file
+ */
+#define PI 3.14159265359
+
+#endif
