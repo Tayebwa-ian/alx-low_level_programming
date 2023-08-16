@@ -1,0 +1,6 @@
+/**
+ *ap_add - add two integers
+ *@a: first integer
+ *@b: second integer
+ *Return: result of the operation
+ */
