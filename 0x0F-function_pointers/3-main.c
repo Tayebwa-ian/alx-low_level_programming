@@ -9,13 +9,14 @@ int main(int argc, char *args[])
 {
 	int result, a, b;
 
-	a = atoi(args[1]);
-	b = atoi(args[3]);
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	a = atoi(args[1]);
+	b = atoi(args[3]);
 
 	if (get_op_func(args[2]) == NULL)
 	{
