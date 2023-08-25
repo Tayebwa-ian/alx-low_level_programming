@@ -4,7 +4,7 @@
  *@str: the string
  *Return: Length of a string
  */
-int _strlen(char *str)
+int _strlen(const char *str)
 {
 	int i = 0;
 
@@ -19,21 +19,34 @@ int _strlen(char *str)
 /**
  *add_node_end - function that adds a new node at the end of a list_t list.
  *@head: head node
+ *@str: string to copy
  *Return: the address of the new element, or NULL if it failed
  */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *temp;
+	list_t *temp, *new;
 
+	temp = *head;
+
+	if (head == NULL)
+		return (NULL);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	new->next = NULL;
 	if (*head == NULL)
-		return (NULL);
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
-		return (NULL);
-	temp->str = strdup(str);
-	temp->len = _strlen(str);
-	temp->next = NULL;
-	*head = temp;
+	{
+		*head = new;
+		return (*head);
+	}
+
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->next = new;
 	return (*head);
 }
