@@ -31,8 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	temp = ht->array[index];
-	while (temp != NULL)
-		temp = temp->next;
-	temp = item;
+	ht->array[index] = item;
+	item->next = temp;
 	return (1);
 }
