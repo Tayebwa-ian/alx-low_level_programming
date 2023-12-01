@@ -13,9 +13,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *item;
 
-	if (key == NULL || value == NULL || ht == NULL)
+	if (key == NULL || *key == '\0' || ht == NULL)
 		return (0);
 	index = key_index((unsigned char *)key, ht->size);
+
+	node = ht->array[index];
+	while (node)/* modify the value if the exact key already exists */
+	{
+		if (strcmp((char *)key, node->key) == 0)
+		{
+			node->value = strdup((char *) value);
+			return (1);
+		}
+		node = node->next;
+	}
+
 	item = malloc(sizeof(hash_node_t));
 	if (item == NULL)
 	{
@@ -30,18 +42,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		ht->array[index] = item;
 		return (1);
-	}
-
-	node = ht->array[index];
-	while (node)/* modify the value if the exact key already exists */
-	{
-		if (strcmp((char *)key, node->key) == 0)
-		{
-			free(item);
-			node->value = strdup((char *) value);
-			return (1);
-		}
-		node = node->next;
 	}
 
 	temp = ht->array[index]; /* add key and value if key didn't exist */
