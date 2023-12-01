@@ -11,16 +11,19 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	char *temp = "";
 
-	printf("{");
-	for (i = 0; i < ht->size; i++)
+	if (ht != NULL)
 	{
-		head = ht->array[i];
-		while(head)
+		printf("{");
+		for (i = 0; i < ht->size; i++)
 		{
-			printf("%s'%s': '%s'", temp, head->key, head->value);
-			temp = ", ";
-			head = head->next;
+			head = ht->array[i];
+			while (head)
+			{
+				printf("%s'%s': '%s'", temp, head->key, head->value);
+				temp = ", ";
+				head = head->next;
+			}
 		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
