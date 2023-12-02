@@ -39,11 +39,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item->key = strdup((char *)key);
 	item->value = strdup((char *)value);
 	item->next = NULL;
-	if (ht->array[index] == NULL)
-	{
-		ht->array[index] = item;
-		return (1);
-	}
 
 	temp = ht->array[index]; /* add key and value if key didn't exist */
 	ht->array[index] = item;
