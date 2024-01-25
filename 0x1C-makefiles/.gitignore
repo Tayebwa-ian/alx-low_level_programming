@@ -2,4 +2,5 @@
 *.o
 school
 *.c
-main*
+*main.c
+*main.py
