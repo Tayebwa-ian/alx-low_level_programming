@@ -14,25 +14,28 @@ def island_perimeter(grid) -> int:
     m = 0
 
     # if grid length and width do not exceed 100 do this
-    if grid_len <= 101 and len(grid[0]) <= 101:
+    if grid_len <= 100 and len(grid[0]) <= 100:
         for n in range(grid_len):
             for m in range(len(grid[n])):
                 if grid[n][m] == 1:
-                    # if sorrounded by water on y-axis do this
-                    if n in range(1, grid_len - 1):
-                        if grid[n - 1][m] == 0:
+                    if n in range(0, grid_len - 0):
+                        if n == 0:
                             parameter += 1
-                        if grid[n + 1][m] == 0:
+                        elif grid[n - 1][m] == 0:
                             parameter += 1
-                    else:
-                        return 0
-                    # if sorrounded by water on x-axis do this
-                    if m in range(1, len(grid[n]) - 1):
-                        if grid[n][m - 1] == 0:
+                        if n == grid_len - 1:
                             parameter += 1
-                        if grid[n][m + 1] == 0:
+                        elif grid[n + 1][m] == 0:
                             parameter += 1
-                    else:
-                        return 0
+
+                    if m in range(0, len(grid[n])):
+                        if m == 0:
+                            parameter += 1
+                        elif grid[n][m - 1] == 0:
+                            parameter += 1
+                        if m == len(grid[n]) - 1:
+                            parameter += 1
+                        elif grid[n][m + 1] == 0:
+                            parameter += 1
 
     return parameter
