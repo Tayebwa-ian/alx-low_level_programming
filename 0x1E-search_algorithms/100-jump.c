@@ -29,9 +29,9 @@ int jump_search(int *array, size_t size, int value)
 		/* perform linear search on a subarray */
 		for (i = start; i <= end; i++)
 		{
+			printf("Value checked array[%ld] = [%d]\n", i, *(array + i));
 			if (i == size - 1)
 				break;
-			printf("Value checked array[%ld] = [%d]\n", i, *(array + i));
 			if (*(array + i) == value)
 				return (i);
 		}
