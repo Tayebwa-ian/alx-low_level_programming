@@ -5,3 +5,9 @@
 *jump
 *interpolation
 *exponential
+104-advanced_binary
+listint
+skiplist
+create_list.c
+free_list.c
+print_list.c
