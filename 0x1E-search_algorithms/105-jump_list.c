@@ -14,7 +14,7 @@ listint_t *list_linear_search(listint_t *head, listint_t *stop, int value)
 	head->index, stop->index);
 	while (head)
 	{
-		printf("Value checked at index[%ld] = [%d]\n",
+		printf("Value checked at index [%ld] = [%d]\n",
 		head->index, head->n);
 		if (head->n == value)
 			return (head);
