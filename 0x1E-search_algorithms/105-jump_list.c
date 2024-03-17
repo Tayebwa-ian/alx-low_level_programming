@@ -47,7 +47,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		{
 			if (node->index == step)
 			{
-				printf("Value checked at index[%ld] = [%d]\n",
+				printf("Value checked at index [%ld] = [%d]\n",
 				node->index, node->n);
 				if (node->n <= value)
 				{
